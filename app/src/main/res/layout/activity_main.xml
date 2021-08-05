@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+
+    <EditText
+        android:id="@+id/argOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter first figure"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/txView"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@+id/txView"
+        app:layout_constraintTop_toBottomOf="@+id/txView" />
+
+    <EditText
+        android:id="@+id/argTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+
+        android:gravity="center"
+        android:hint="Enter second figure"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/argOne"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/argOne"
+        app:layout_constraintTop_toBottomOf="@+id/argOne" />
+
+    <com.google.android.material.circularreveal.CircularRevealGridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
+        android:columnCount="2"
+        android:foregroundGravity="center"
+        android:orientation="horizontal"
+        android:rowCount="2"
+        android:splitMotionEvents="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/argTwo">
+
+        <Button
+            android:id="@+id/BtSum"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="10dp"
+            android:text="+">
+
+        </Button>
+
+        <Button
+            android:id="@+id/BtSub"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="-">
+
+        </Button>
+
+        <Button
+            android:id="@+id/BtMult"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="*">
+
+        </Button>
+
+        <Button
+            android:id="@+id/BtDiv"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+
+            android:text="/">
+
+        </Button>
+
+
+
+    </com.google.android.material.circularreveal.CircularRevealGridLayout>
+
+    <TextView
+        android:id="@+id/txView"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="40dp"
+        android:foregroundGravity="center"
+        android:gravity="right"
+        android:hint="Result"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/argOne"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
